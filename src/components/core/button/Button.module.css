@@ -1,9 +1,9 @@
 .root {
-	--button-height-xs: 26px;
-	--button-height-sm: 32px;
-	--button-height-md: 38px;
-	--button-height-lg: 44px;
-	--button-height-xl: 50px;
+	--button-height-xs: 30px;
+	--button-height-sm: 36px;
+	--button-height-md: 42px;
+	--button-height-lg: 50px;
+	--button-height-xl: 60px;
 
 	--button-height-compact-xs: 22px;
 	--button-height-compact-sm: 26px;
@@ -11,14 +11,14 @@
 	--button-height-compact-lg: 34px;
 	--button-height-compact-xl: 40px;
 
-	--button-padding-x-xs: 8px;
-	--button-padding-x-sm: 12px;
-	--button-padding-x-md: 16px;
-	--button-padding-x-lg: 20px;
-	--button-padding-x-xl: 24px;
+	--button-padding-x-xs: 12px;
+	--button-padding-x-sm: 16px;
+	--button-padding-x-md: 20px;
+	--button-padding-x-lg: 24px;
+	--button-padding-x-xl: 32px;
 
-	--button-padding-x-compact-xs: 8px;
-	--button-padding-x-compact-sm: 9px;
+	--button-padding-x-compact-xs: 7px;
+	--button-padding-x-compact-sm: 8px;
 	--button-padding-x-compact-md: 10px;
 	--button-padding-x-compact-lg: 12px;
 	--button-padding-x-compact-xl: 14px;
@@ -28,7 +28,7 @@
 	--button-color: var(--mantine-color-white);
 
 	user-select: none;
-	font-weight: 500;
+	font-weight: 600;
 	position: relative;
 	line-height: 1;
 	text-align: center;

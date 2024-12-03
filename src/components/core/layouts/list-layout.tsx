@@ -1,4 +1,4 @@
-import { Box, Button, Group, Stack, Title } from '@mantine/core'
+import { Box, Button, Group, Stack, TextInput, Title } from '@mantine/core'
 import type { ReactNode } from 'react'
 
 interface ListLayoutProps {
@@ -17,7 +17,7 @@ export const ListLayout = (props: ListLayoutProps) => {
 					borderBottom: '1px solid #E7E8EC',
 				}}
 				px={{ base: 'md' }}
-				py="xs"
+				py="md"
 			>
 				<Group justify="space-between">
 					<Group gap="xs">
@@ -25,11 +25,11 @@ export const ListLayout = (props: ListLayoutProps) => {
 							variant="filled"
 							justify="space-between"
 							radius="md"
+							size="sm"
 							onClick={() => createHandler?.()}
 						>
 							Mới
 						</Button>
-
 						<Title order={4} visibleFrom="md">
 							{title}
 						</Title>

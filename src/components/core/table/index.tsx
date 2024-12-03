@@ -40,7 +40,7 @@ export function Table<T>(props: TableProps<T>) {
 	const tableComponent = (
 		<>
 			<DataTable
-				withRowBorders={false}
+				withRowBorders
 				withTableBorder={false}
 				scrollAreaProps={{
 					style: {
@@ -49,10 +49,11 @@ export function Table<T>(props: TableProps<T>) {
 				}}
 				className={classes.table}
 				fetching={isPending}
-				highlightOnHover={false}
-				verticalSpacing="sm"
+				highlightOnHover={true}
+				verticalSpacing="xs"
 				verticalAlign="top"
 				noRecordsText="Không có dữ liệu"
+				withColumnBorders
 				{...otherProps}
 			/>
 			{paginationComponent}
