@@ -20,6 +20,9 @@ dependencies:
   '@tanstack/react-router':
     specifier: ^1.85.3
     version: 1.85.3(react-dom@18.3.1)(react@18.3.1)
+  mantine-datatable:
+    specifier: ^7.14.5
+    version: 7.14.5(@mantine/core@7.14.3)(@mantine/hooks@7.14.3)(clsx@2.1.1)(react@18.3.1)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -3025,6 +3028,20 @@ packages:
     dependencies:
       yallist: 3.1.1
     dev: true
+
+  /mantine-datatable@7.14.5(@mantine/core@7.14.3)(@mantine/hooks@7.14.3)(clsx@2.1.1)(react@18.3.1):
+    resolution: {integrity: sha512-482OAurvyWq7VxshNx88z8nlFoy7yNQ20o6BT3h3Zayd2QI9PjEVqyRYjNEw9rZN7ZR4QgjgaA5ofo9r4m+fSw==}
+    peerDependencies:
+      '@mantine/core': '>=7.14'
+      '@mantine/hooks': '>=7.14'
+      clsx: '>=2'
+      react: '>=18.2'
+    dependencies:
+      '@mantine/core': 7.14.3(@mantine/hooks@7.14.3)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@mantine/hooks': 7.14.3(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+    dev: false
 
   /meow@12.1.1:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
