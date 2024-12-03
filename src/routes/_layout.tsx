@@ -11,7 +11,7 @@ function RouteComponent() {
 	const isMobile = useMediaQuery(`(max-width: ${em(1023)})`)
 	return (
 		<AppShell
-			header={{ height: 48, collapsed: !isMobile }}
+			header={{ height: 53, collapsed: !isMobile }}
 			navbar={{
 				width: '235',
 				breakpoint: 'md',
@@ -23,7 +23,12 @@ function RouteComponent() {
 			padding={0}
 		>
 			<AppShell.Header>
-				<Group h="100%" px={{ base: 'md', md: 'lg' }} justify="space-between">
+				<Group
+					h="100%"
+					px={{ base: 'md', md: 'lg' }}
+					py={{ base: 'xs', md: 'md' }}
+					justify="space-between"
+				>
 					<Burger opened={opened} onClick={toggle} hiddenFrom="md" size="xs" />
 					<Box />
 				</Group>

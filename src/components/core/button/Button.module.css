@@ -28,7 +28,7 @@
 	--button-color: var(--mantine-color-white);
 
 	user-select: none;
-	font-weight: 600;
+	font-weight: 500;
 	position: relative;
 	line-height: 1;
 	text-align: center;
