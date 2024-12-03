@@ -12,11 +12,12 @@
 	}
 
 	td {
-		padding: 10px;
+		padding-left: rem(16px);
+		padding-right: rem(16px);
 	}
 
 	tbody {
-		&tr:hover {
+		tr:not(:empty):hover {
 			background-color: hsl(0, 0%, 98%);
 		}
 	}

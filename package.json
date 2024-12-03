@@ -10,15 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@mantine/core": "^7.14.3",
     "@mantine/hooks": "^7.14.3",
     "@tailwindcss/postcss": "4.0.0-beta.4",
     "@tanstack/react-query": "^5.62.1",
     "@tanstack/react-router": "^1.85.3",
     "@vinejs/vine": "^3.0.0",
+    "@xstate/store": "^2.6.1",
     "mantine-datatable": "^7.14.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
     "tailwindcss": "4.0.0-beta.4",
     "wretch": "^2.11.0"
   },

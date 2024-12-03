@@ -15,3 +15,10 @@ export const uomSchema = vine.object({
 })
 
 export type Uom = Infer<typeof uomSchema>
+
+export const newUomSchema = vine.object({
+	name: vine.string(),
+})
+
+export type NewUom = Infer<typeof newUomSchema>
+export const newUomValidator = vine.compile(newUomSchema)

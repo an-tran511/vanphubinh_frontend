@@ -1,6 +1,6 @@
-import { keepPreviousData, queryOptions, useQuery } from '@tanstack/react-query'
-import { fetchPaginatedUoms } from './api'
-import type { UomQueryParams } from './validator'
+import { keepPreviousData, queryOptions, useMutation, useQuery } from '@tanstack/react-query'
+import { createUom, fetchPaginatedUoms } from './api'
+import type { NewUom, UomQueryParams } from './validator'
 
 export const uomQueries = {
 	all: () => ['uoms'],
@@ -15,4 +15,10 @@ export const uomQueries = {
 
 export const useGetPaginatedUoms = (params: UomQueryParams) => {
 	return useQuery(uomQueries.list(params))
+}
+
+export const useCreateUom = () => {
+	return useMutation({
+		mutationFn: (data: NewUom) => createUom(data),
+	})
 }

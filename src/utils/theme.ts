@@ -1,5 +1,6 @@
-import { Button, createTheme } from '@mantine/core'
+import { Button, TextInput, createTheme } from '@mantine/core'
 import buttonClasses from '../components/core/button/Button.module.css'
+import inputClasses from '../components/core/input/Input.module.css'
 
 export const theme = createTheme({
 	breakpoints: {
@@ -30,5 +31,6 @@ export const theme = createTheme({
 	defaultRadius: 'md',
 	components: {
 		Button: Button.extend({ classNames: buttonClasses }),
+		TextInput: TextInput.extend({ classNames: inputClasses }),
 	},
 })

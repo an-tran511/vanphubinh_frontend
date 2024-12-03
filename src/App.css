@@ -4,3 +4,7 @@
 @import "tailwindcss/utilities" layer(utilities);
 @import "@mantine/core/styles.layer.css";
 @import "mantine-datatable/styles.layer.css";
+
+@utility form-grid {
+	grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+}
