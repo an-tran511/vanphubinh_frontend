@@ -49,7 +49,7 @@ export function Table<T>(props: TableProps<T>) {
 				}}
 				className={classes.table}
 				fetching={isPending}
-				highlightOnHover
+				highlightOnHover={false}
 				verticalSpacing="sm"
 				verticalAlign="top"
 				noRecordsText="Không có dữ liệu"

@@ -8,7 +8,11 @@ export default defineConfig({
 	plugins: [TanStackRouterVite(), react(), tsconfigPaths()],
 	server: {
 		proxy: {
-			"/api": "http://localhost:3000",
+			"/api": {
+				changeOrigin: true,
+				target: "http://localhost:3000",
+				rewrite: (path) => path.replace(/^\/api/, ""),
+			},
 		},
 	},
 });
