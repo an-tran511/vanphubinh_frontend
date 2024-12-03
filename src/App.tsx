@@ -2,8 +2,8 @@ import './App.css'
 import { MantineProvider } from '@mantine/core'
 import { MutationCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { theme } from '@utils/theme'
 import { routeTree } from './routeTree.gen'
-import { theme } from './utils/theme'
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
