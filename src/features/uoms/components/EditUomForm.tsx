@@ -1,18 +1,16 @@
 import { InputLabel } from '@components/core/input-label'
 import { TextInput } from '@components/form/text-input'
 import { Button, Stack } from '@mantine/core'
-import { useQueryClient } from '@tanstack/react-query'
 import { useSelector } from '@xstate/store/react'
 import { useForm } from 'react-hook-form'
-import { uomQueries, useFindUomById, useUpdateUom } from '../hooks'
+import { useFindUomById, useUpdateUom } from '../hooks'
 import { uomStore } from '../store'
 import type { UpdateUomPayload } from '../validator'
 
 export const EditUomForm = () => {
 	const { uomId } = useSelector(uomStore, (state) => state.context)
-	const queryClient = useQueryClient()
 	const { data } = useFindUomById(uomId)
-	const { control, handleSubmit, reset } = useForm<UpdateUomPayload>({
+	const { control, handleSubmit } = useForm<UpdateUomPayload>({
 		defaultValues: {
 			id: data?.id,
 			name: data?.name,
@@ -44,7 +42,7 @@ export const EditUomForm = () => {
 				</div>
 
 				<Button type="submit" loading={isUpdating}>
-					Tạo
+					Cập nhật
 				</Button>
 			</Stack>
 		</form>

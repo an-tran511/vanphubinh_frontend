@@ -9,7 +9,7 @@ import { FocusTrap, Group, Loader, Modal, ThemeIcon } from '@mantine/core'
 import { createFileRoute, getRouteApi, useNavigate } from '@tanstack/react-router'
 import { generatePagination } from '@utils/generate-pagination'
 import { useSelector } from '@xstate/store/react'
-import { EyeIcon } from 'lucide-react'
+import { SquarePen } from 'lucide-react'
 import { Suspense } from 'react'
 
 export const Route = createFileRoute('/_layout/uoms/')({
@@ -56,8 +56,9 @@ function RouteComponent() {
 						}}
 						size="sm"
 						variant="light"
+						radius="md"
 					>
-						<EyeIcon size={12} strokeWidth={2} />
+						<SquarePen size={12} strokeWidth={2.5} />
 					</ThemeIcon>
 				</Group>
 			),
