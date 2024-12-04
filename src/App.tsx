@@ -13,6 +13,7 @@ const queryClient = new QueryClient({
 	},
 	mutationCache: new MutationCache({
 		onSuccess: (_data, _variables, _context, mutation) => {
+			console.log('mutation', mutation.options.mutationKey)
 			queryClient.invalidateQueries({
 				queryKey: mutation.options.mutationKey,
 			})

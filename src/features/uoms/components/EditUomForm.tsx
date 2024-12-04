@@ -2,25 +2,33 @@ import { InputLabel } from '@components/core/input-label'
 import { TextInput } from '@components/form/text-input'
 import { Button, Stack } from '@mantine/core'
 import { useQueryClient } from '@tanstack/react-query'
+import { useSelector } from '@xstate/store/react'
 import { useForm } from 'react-hook-form'
-import { uomQueries, useCreateUom } from '../hooks'
+import { uomQueries, useFindUomById, useUpdateUom } from '../hooks'
 import { uomStore } from '../store'
-import type { CreateUomPayload } from '../validator'
+import type { UpdateUomPayload } from '../validator'
 
-export const NewUomForm = () => {
+export const EditUomForm = () => {
+	const { uomId } = useSelector(uomStore, (state) => state.context)
 	const queryClient = useQueryClient()
-	const { control, handleSubmit } = useForm<CreateUomPayload>({
+	const { data } = useFindUomById(uomId)
+	const { control, handleSubmit, reset } = useForm<UpdateUomPayload>({
 		defaultValues: {
-			name: '',
+			id: data?.id,
+			name: data?.name,
+		},
+		values: {
+			id: data?.id,
+			name: data?.name,
 		},
 	})
 
-	const { mutate, isPending: isCreating } = useCreateUom()
+	const { mutate, isPending: isUpdating } = useUpdateUom(data?.id)
 
-	const onSubmit = (data: CreateUomPayload) => {
-		mutate(data, {
+	const onSubmit = (newData: UpdateUomPayload) => {
+		mutate(newData, {
 			onSuccess: () => {
-				uomStore.send({ type: 'closeCreateModal' })
+				uomStore.send({ type: 'closeEditModal' })
 			},
 		})
 	}
@@ -35,7 +43,7 @@ export const NewUomForm = () => {
 					</>
 				</div>
 
-				<Button type="submit" loading={isCreating}>
+				<Button type="submit" loading={isUpdating}>
 					Tạo
 				</Button>
 			</Stack>

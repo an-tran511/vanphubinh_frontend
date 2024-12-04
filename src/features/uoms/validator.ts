@@ -16,9 +16,17 @@ export const uomSchema = vine.object({
 
 export type Uom = Infer<typeof uomSchema>
 
-export const newUomSchema = vine.object({
+export const createUomSchema = vine.object({
 	name: vine.string(),
 })
 
-export type NewUom = Infer<typeof newUomSchema>
-export const newUomValidator = vine.compile(newUomSchema)
+export type CreateUomPayload = Infer<typeof createUomSchema>
+export const createUomValidator = vine.compile(createUomSchema)
+
+export const updateUomSchema = vine.object({
+	id: vine.string().minLength(22).maxLength(23),
+	name: vine.string(),
+})
+
+export type UpdateUomPayload = Infer<typeof updateUomSchema>
+export const updateUomValidator = vine.compile(updateUomSchema)

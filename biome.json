@@ -26,6 +26,14 @@
 			}
 		}
 	},
+	"css": {
+		"formatter": {
+			"enabled": false
+		},
+		"linter": {
+			"enabled": false
+		}
+	},
 	"javascript": {
 		"formatter": {
 			"enabled": true,

@@ -53,7 +53,7 @@ export function Table<T>(props: TableProps<T>) {
 				verticalSpacing="xs"
 				verticalAlign="top"
 				noRecordsText="Không có dữ liệu"
-				withColumnBorders
+				withColumnBorders={false}
 				{...otherProps}
 			/>
 			{paginationComponent}
